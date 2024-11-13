@@ -22,5 +22,7 @@ def category_events(request, category_id):
 
 def event_detail(request, event_id):
     event = get_object_or_404(Event, id=event_id)
-    event_detail = event.details
-    return render(request, 'event_detail.html', {'event': event, 'event_detail': event_detail})
+    return render(request, 'event_detail.html', {'event': event})
+
+
+

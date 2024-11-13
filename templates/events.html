@@ -71,7 +71,7 @@
 
         <div class="events-list">
             {% for event in events %}
-            <div class="event-card ">
+            <div class="event-card  "  onclick="window.location.href='{% url 'event_detail' event.id %}'">
                 <img src="{{ event.image.url }}" alt="{{ event.title }}" style="width:200px;height:auto;">
                 <div class="event-details">
                     <div class="event-date">{{ event.date }}</div>
